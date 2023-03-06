@@ -374,15 +374,6 @@ app.patch("/cours", async (request, response) => {
 
 
 // Demarrer le serveur
-if(process.env.NODE_ENV === 'production') {
   app.listen(process.env.PORT);
   console.log("Serveur demarre: http://localhost:" + process.env.PORT);
-}
-else {
-  const credentials = {
-    key: await readFile('./security/localhost.key'),
-    cert: await readFile('./security/localhost.cert')
-  }
-  https.createServer(credentials, app).listen(process.env.PORT);
-  console.log("Serveur demarre: https://localhost:" + process.env.PORT);
-}
+
