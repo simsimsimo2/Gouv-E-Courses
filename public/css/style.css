@@ -1,0 +1,540 @@
+/**
+*! global css (all modified elements)
+**/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+html{
+  height: 100%;
+  overflow-x: hidden;
+}
+main{
+  flex: 1;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: sans-serif;
+  font-size: 10px;
+  background-color: beige;
+  font-weight: 700;
+  position: relative;
+}
+header {
+  position: static;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  min-height: 95px;
+}
+ul {
+  list-style: none;
+}
+ul > li {
+  display: block;
+  padding: 25px;
+}
+li > a {
+  cursor: pointer;
+  text-decoration: none;
+  color: #fff;
+  font-size: x-large;
+  text-decoration: underline;
+}
+li > a:hover {
+  color: coral;
+}
+h1,
+h2,
+h3,
+span,
+p {
+  text-align: center;
+}
+
+label {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: medium;
+}
+input {
+  height: 30px;
+  padding: 4px 4px 4px 4px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: medium;
+}
+textarea {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: medium;
+  text-align: justify;
+  width: 100%;
+  height: 150px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: whitesmoke;
+  font-size: 16px;
+  resize: none;
+}
+footer {
+  background-color: rgb(138, 171, 187);
+  height: 95px;
+  position: static;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+/*---------nav et links*/
+.null{
+  margin: 0;
+  padding: 0;
+}
+.zone {
+  width: 100%;
+  height: 95px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: black;
+  color: white;
+}
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  font-size: 2rem;
+}
+.logo {
+  margin: 90px;
+  font-size: 2rem;
+  color: goldenrod;
+}
+.logo:hover {
+  cursor: auto;
+}
+/**
+*? cart style only
+**/
+.cart {
+  position: relative;
+  background-color: white;
+  color: black;
+  font-size: 30px;
+  padding: 5px;
+  border-radius: 4px;
+}
+.cartAmount {
+  position: absolute;
+  top: -15px;
+  right: -10px;
+  font-size: 16px;
+  background-color: red;
+  color: white;
+  padding: 3px;
+  border-radius: 3px;
+}
+/**
+/*Fin nav*/
+/*Banner*/
+
+.banner {
+  height: 100vh;
+  width: 100%;
+  background-image: url(../img/img-2.jpg);
+  background-size: cover;
+  margin-bottom: 80px;
+}
+.photo {
+  background-image: url(../img/img-8.jpg);
+  width: 220px;
+  height: 300px;
+}
+/*Fin Banner*/
+/**
+*! SHOP ITEMS STYLES ARE HERE.
+**/
+.cours-content {
+  margin-top: 80px;
+  margin-bottom: 70px;
+  display: grid;
+  grid-template-columns: repeat(4, 223px);
+  gap: 100px;
+  justify-content: center;
+}
+.cours-img {
+  background-image: url(../img/img-8.jpg);
+  height: 50vh;
+  width: 220px;
+}
+.cours-box {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  border: 3px solid rgb(33, 32, 32);
+  background-color: bisque;
+  width: auto;
+  height: auto;
+}
+.cours-box:hover {
+  transform: scale(1.05);
+  transition-duration: 0.3s;
+  -webkit-transform: scale(1.05);
+}
+.bt-mod {
+  margin-top: 17px;
+}
+
+.inner-box {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.bi-dash-lg {
+  color: red;
+}
+.bi-plus-lg {
+  color: green;
+}
+
+/**
+*! cours handlebars style here
+*
+**/
+.mg_top {
+  margin-top: 170px;
+}
+.cours-box-compte {
+  display: flex;
+  width: 220px;
+  flex-direction: column;
+  gap: 4px;
+  border: 2px solid black;
+}
+.cours-img-compte {
+  background-image: url(../img/img-8.jpg);
+  height: 20vh;
+  width: 218px;
+}
+.cours-top {
+  /* border: 1px solid blue; */
+  display: grid;
+  grid-template-columns: repeat(3, 223px);
+  gap: 70px;
+  justify-content: center;
+}
+.cours-nom {
+  text-align: center;
+}
+.capacite {
+  text-align: center;
+}
+.description {
+  text-align: center;
+}
+
+.copyright{
+  text-align:center;
+  padding-top:24px;
+  opacity:0.7;
+  font-size:13px;
+  color: #fff;
+  font-size: large;
+}
+
+.erreur {
+  display: none;
+  padding: 0.5rem;
+  color: red;
+  font-size: 15px;
+}
+
+.sect {
+  margin-top: 80px;
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+}
+.account-link{
+font-size: small;
+}
+.creation_cours {
+  display: flex;
+  flex-direction: column;
+  border: 15px solid goldenrod;
+  border-radius: 10px;
+  width: 30rem;
+  padding: 10px 10px 10px 10px;
+  gap: 20px;
+  background-color: #89cffd;
+}
+.cours-descript {
+  margin-top: 1rem;
+  font-size: 15;
+}
+.cours-nom {
+  font-size: 25px;
+  font-weight: bold;
+}
+.affichageUtilisateurInfo{
+  color: goldenrod;
+  padding-right: 100px;
+  cursor: default;
+}
+
+
+/*All the buttons*/
+.btn_ajouter {
+  cursor: pointer;
+  padding: 0.5rem;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 20px;
+  border: none;
+  background-color: coral;
+  border-radius: 10px;
+  width: auto;
+  height: auto;
+}
+.btn_ajouter:hover {
+  background-color: rgb(252, 26, 71);
+}
+.btn_top {
+  display: flex;
+  justify-content: center;
+}
+.btn_delete {
+  cursor: pointer;
+  padding: 0.5rem;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 20px;
+  border: none;
+  background-color: goldenrod;
+  border-radius: 10px;
+}
+.btn_delete:hover {
+  background-color: coral;
+}
+.btn {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+.btn_inscrire {
+  cursor: pointer;
+  padding: 0.5rem;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 20px;
+  border: none;
+  height: auto;
+  background-color: goldenrod;
+  border-radius: 10px;
+}
+.btn_inscrire:hover {
+  background-color: coral;
+}
+.btn_desinscrire {
+  cursor: pointer;
+  padding: 0.5rem;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 20px;
+  border: none;
+  height: auto;
+  background-color: goldenrod;
+  border-radius: 10px;
+}
+.btn_desinscrire:hover {
+  background-color: coral;
+  transform: scale(1.05);
+  transition-duration: 0.3s;
+  -webkit-transform: scale(1.05);
+}
+#button-cookie{
+  cursor: pointer;
+  border-radius: 5%;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: black;
+  height: 50px;
+  width: auto;
+  font-size: 20px;
+  background-color: goldenrod;
+}
+button:disabled {
+  border: 2px solid #828282;
+  color: #828282;
+  cursor: not-allowed;
+}
+/**
+*Section des cookies! Reference au site: https://codepen.io/makaroni4/pen/zaYroR
+**/
+#cookie-consent-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 2147483645;
+  box-sizing: border-box;
+  width: 100%;
+  height: auto;
+
+  background-color: #F1F6F4;
+}
+
+.cookie-consent-banner__inner {     
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 32px 0;
+}
+
+.cookie-consent-banner__copy { 
+  margin-bottom: 16px;
+}
+
+.cookie-consent-banner__header {
+  margin-bottom: 8px;
+  
+  font-family: "CeraPRO-Bold", sans-serif, arial;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.cookie-consent-banner__description {
+  font-family: "CeraPRO-Regular", sans-serif, arial;
+  font-weight: normal;
+  color: #838F93;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+#cookie-consent-banner__cta {
+  box-sizing: border-box;
+  display: inline-block;
+  min-width: 164px;
+  padding: 11px 13px;
+  height: 45px;
+    
+  border-radius: 2px;
+  
+  background-color: #2CE080;
+   
+  color: #FFF;
+  text-decoration: none;
+  text-align: center;
+  font-family: "CeraPRO-Regular", sans-serif, arial;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+#cookie-consent-banner__cta--secondary { 
+  padding: 9px 13px;
+  height: 45px;
+  min-width: 164px;
+  
+  border: 2px solid #3A4649;
+  
+  background-color: transparent;
+  
+  color: #2CE080;
+}
+
+#cookie-consent-banner__cta:hover {
+  background-color: #20BA68;
+}
+
+#cookie-consent-banner__cta--secondary:hover {
+  border-color: #838F93;
+    
+  background-color: transparent;
+  
+  color: #22C870;
+}
+
+#cookie-consent-banner__cta:last-child {
+  margin-left: 16px;
+}
+
+/**
+*! media queries
+*? quand tu descends a 1000px voici le resultat
+**/
+@media (max-width: 1000px) {
+  .cours-content {
+    grid-template-columns: repeat(2, 223px);
+  }
+  ul > li{
+    padding: 5px;
+    margin: 5px;
+  }
+  .logo{
+    font-size: x-large;
+    margin: auto;
+  }
+  .affichageUtilisateurInfo{
+    font-size: x-large;
+    padding: 0;
+  }
+}
+/**
+*! media queries
+*? Mobile friendly
+**/
+@media (max-width: 550px) {
+  .cours-content {
+    grid-template-columns: repeat(1, 223px);
+  }
+  .logo{
+    font-size: large;
+    margin: auto;
+  }
+  li > a{
+    font-size: large;
+  }
+  ul > li{
+    padding: 5px;
+    margin: 5px;
+  }
+  ul{
+    margin-right: 90px;
+    flex-direction: column;
+    display: flex;
+    justify-content: space-between;
+  }
+  .zone{
+    height: auto;
+  }
+  .btn_ajouter{
+    font-size: large;
+  }
+  .affichageUtilisateurInfo{
+    font-size: large;
+    padding: 0;
+  }
+  footer{
+    margin-top: 3rem;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+  }
+  .creation_cours{
+    width: auto;
+  }
+  header{
+    width: auto;
+  }
+  .sect{
+    margin-top: 2rem;
+  }
+  .form{
+    margin-bottom: 4rem;
+  }
+  .banner{
+    height: 35vh;
+  }
+  .cours-content {
+    margin-bottom: 110px;
+  }
+}

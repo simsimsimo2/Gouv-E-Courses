@@ -1,0 +1,36 @@
+<!--Formulaire pour cree un compte a l'utilisateur-->
+<section class="sect">
+    <form class="form" id="form_inscription" novalidate>
+        <div class="creation_cours">
+            <label>Inscription</label>
+
+            <label>Nom:</label>
+            <input type="text" id="nom_utilisateur" required>
+            <div id="erreur-nom" class="erreur"></div>
+
+            <label>Prenom:</label>
+            <input type="text" id="prenom_utilisateur" required>
+            <div id="erreur-prenom" class="erreur"></div>
+
+            <label>Courriel:</label>
+            <input type="email" id="courriel_utilisateur"required>
+            <div id="erreur-courriel" class="erreur"></div>
+
+            <label>Mot de passe:</label>
+            <input type="password" id="motDePasse_utilisateur" required>
+            <div id="erreur-motDePasseUtilisateur" class="erreur"></div>
+
+            <label>Confirmer mot de passe:</label>
+            <input type="password" id="confirmerMotDePasse_utilisateur" required>
+            <div id="erreur-ConfirmerMotDePasseUtilisateur" class="erreur"></div>
+
+            <div id="erreur-inscription" class="erreur"></div>
+            <div class="btn_top">
+                <button type="submit" class="btn_ajouter">Confirmer</button> 
+            </div>
+
+            <!--Redirection pour se connecter a un compte-->
+            <a href="/connexionUtilisateur" class="account-link">Déja un compte avec nous? Cliquez ici pour vous connecter!</a>    
+        </div> 
+    </form>
+</section>

@@ -1,0 +1,23 @@
+<!--Page principaledu site pour l'inscription du cours-->
+<!--banner-->
+{{>banner}}
+
+<!--Liste des cours-->
+<!--liste des cours recuperes de la base de donnee et on les affiche ici-->
+<section class="cours-content">
+  {{#each cours}}
+  <form class="form_cours" data-id="{{this.id_cours}}">
+    <div class="cours-box">
+      <div class="cours-img-compte"></div>
+      <label class="cours-nom">{{this.nom}}</label>
+      <label class="cours-descript">{{this.description}}</label>
+      <label class="cours-descript">Capacite total: {{this.capacite}}</label>
+      <label class="cours-descript">Nombre de cours: {{this.nb_cours}}</label>
+      <label class="cours-descript">Date de debut (DD/MM/YYYY): {{afficheDate this.date_debut}}</label>
+      <div class="btn">
+        <button data-id-cours="{{this.id_cours}}" type="submit" class="btn_inscrire" {{#if this.estInscrit}}disabled{{/if}}>S'inscrire</button>
+      </div>
+    </div>
+  </form> 
+  {{/each}}
+</section>

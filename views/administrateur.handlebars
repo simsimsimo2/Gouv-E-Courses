@@ -1,0 +1,63 @@
+<!--Afficher Tous les cours pour l'utilisateur connecter en tant que administrateur-->
+{{#if isAdmin}}
+<section class="cours-content">
+  <!--Affichage de chaque cours sa propre boite-->
+  {{#each cours}}
+  <form id="form_cours" data-id="{{this.id_cours}}">
+    <div class="cours-box">
+      <div class="cours-img-compte"></div>
+      <label class="cours-titre">{{this.nom}}</label>
+      <label class="cours-descript">{{this.description}}</label>
+      <label class="cours-descript">Capacite total: {{this.capacite}}</label>
+      <label class="cours-descript">Nombre de cours: {{this.nb_cours}}</label>
+      <label class="cours-descript">Date de debut (DD/MM/YYYY): {{afficheDate this.date_debut}}</label>
+      <label class="cours-descript">Participant: 
+        <ul class="null">
+          {{#each this.listeUtilisateur}}
+          <li class="null">
+            {{this.nom}} {{this.prenom}}
+          </li> 
+          {{/each}}
+        </ul>
+      </label>
+      <div class="btn">
+          <button type="submit" class="btn_delete">Supprimer</button>
+      </div>      
+    </div>
+  </form> 
+  {{/each}}
+</section>
+
+<!--FORMULAIRE INSCRIPTION DES COURS POUR L'ADMIN-->
+<section class="sect">
+    <form class="form" id="form_inscription" novalidate>
+        <div class="creation_cours">
+
+            <label>Nom du cours:</label>
+            <input type="text" id="nom_cours" required>
+            <div id="erreur-nom-cours" class="erreur"></div>
+
+            <label>Description du cours:</label>
+            <textarea id="description_cours" minlength="3" maxlength="200" required></textarea>
+            <div id="erreur-description" class="erreur"></div>
+
+            <label>Capacite maximal de participant:</label>
+            <input type="number" id="capacite_cours" max="100" min="1" required>
+            <div id="erreur-capacite" class="erreur"></div>
+
+            <label>Date de debut du cours:</label>
+            <input type="date" id="date_debut" required>
+            <div id="erreur-date" class="erreur"></div>
+
+            <label>nombre de cours:</label>
+            <input type="number" id="nb_cours" required>
+            <div id="erreur-nbCours" class="erreur" max="100" min="1"></div>
+
+            <div class="btn_top">
+                <button type="submit" class="btn_ajouter">Ajouter</button> 
+            </div>
+                
+        </div> 
+    </form>
+</section>
+{{/if}}

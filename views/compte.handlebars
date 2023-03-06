@@ -1,0 +1,18 @@
+<!--Affichage des cours inscris dans le compte de l'utilisateur-->
+<section class="cours-content">
+  {{#each inscris}}
+  <form class="form_cours" data-id="{{this.id_cours}}">
+    <div class="cours-box">
+      <div class="cours-img-compte"></div>
+      <label class="cours-nom">{{this.nom}}</label>
+      <label class="cours-descript">{{this.description}}</label>
+      <label class="cours-descript">Capacite total: {{this.capacite}}</label>
+      <label class="cours-descript">Nombre de cours: {{this.nb_cours}}</label>
+      <label class="cours-descript">Date de debut (DD/MM/YYYY): {{afficheDate this.date_debut}}</label>
+      <div class="btn">
+        <button type="submit" class="btn_delete">Désinscrire</button>
+      </div>
+    </div>
+  </form> 
+  {{/each}}
+</section>

@@ -1,0 +1,55 @@
+<!--header-->
+<header>
+<!--navigation avec les links et logo-->
+  <nav class="zone">
+    <div class="logo">GOV-E-COURSES</div>
+    <ul class="main">
+
+      <!--Affichage de la page d'acceuil uniquement si l'utilisateur est connecter-->
+      {{#if user}}
+        <li class="affichageUtilisateurInfo">
+          <p>Bienvenue {{user.prenom}}!</p>
+        </li>
+        <li>
+          <a href="/cours">Cours
+          </a>
+        </li>
+        <li>
+          <a href="/compte">Compte
+          </a>
+        </li>
+      {{/if}}
+
+      <!--Interface de l'admin disponible uniquement quand un admin est connecter-->
+      {{#if isAdmin}}
+        <li>
+          <a href="/administrateur">Administrateur
+          </a>
+        </li>
+      {{/if}}
+
+      <!--Affichage du bouton pour la deconnexion uniquement lorsqu'on est connecter-->
+      {{#if user}}
+        <li>
+        <form method="post" action="/deconnexion">
+            <input type="submit" value="Deconnexion" class="btn_desinscrire">
+        </form>
+        </li>
+      {{/if}}
+      
+      <!--Affichage de cette partie quand l'utilisateur n'est pas connecter-->
+      {{#unless user}}
+        <li>
+          <a href="/connexionUtilisateur">Connexion
+          </a>
+        </li>
+        <li>
+          <a href="/inscription">Inscription
+          </a>
+        </li>
+      {{/unless}}
+      
+    </ul>
+  </nav>
+  <!-- fin navigation-->
+</header>

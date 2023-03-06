@@ -1,0 +1,62 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{titre}}</title>
+    <!--css links-->
+    <link rel="stylesheet" href="./css/normalize.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
+    />
+
+    {{#each styles}}
+      <link rel="stylesheet" href="{{this}}" />
+    {{/each}}
+
+    {{#unless accept}}
+        <script type="module" src="/js/cookies.js"></script>
+    {{/unless}}
+
+    {{#each scripts}}
+      <script type="module" src="{{this}}"></script>
+    {{/each}}
+
+  </head>
+  <body>
+    <header>{{>header}}</header> 
+
+    <main>
+
+      <!--Affichage du cookie lors de la connexion-->
+      {{#if user}}
+      {{#unless accept}}
+        <div id="cookie-consent-banner">
+          <div class="cookie-consent-banner__inner">
+            <div class="cookie-consent-banner__copy">
+              <div class="cookie-consent-banner__header">CE SITE UTILISE DES COOKIES</div>
+              <div class="cookie-consent-banner__description">On utilise les cookies pour personnaliser vos preference de sujet lors des prochaine visite.</div>
+            </div>
+
+            <div class="cookie-consent-banner__actions">
+              <input type="button" id="cookie-consent-banner__cta" value="Ok"></input>
+              
+              <input type="button" id="cookie-consent-banner__cta--secondary" value="Refuser"></input>
+            </div>
+          </div>
+        </div>
+      {{/unless}}
+      {{/if}}
+
+      <!--Affichage principale du body-->
+      {{{body}}}
+    </main>
+
+    <!--Affichage du footer dans toute les pages-->
+    <footer>
+      {{>footer}}
+    </footer>
+  </body>
+</html>

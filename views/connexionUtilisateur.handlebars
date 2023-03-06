@@ -1,0 +1,24 @@
+<!--Section pour se connecter a un compte-->
+<section class="sect">
+    <form class="form" id="form_connexion" novalidate>
+        <div class="creation_cours">
+            <label>Connexion</label>
+
+            <label>Courriel:</label>
+            <input type="email" id="courriel_utilisateur"required>
+            <div id="erreur-courriel" class="erreur"></div>
+
+            <label>Mot de passe:</label>
+            <input type="password" id="motDePasse_utilisateur" required>
+            <div id="erreur-motDePasse" class="erreur"></div>
+
+            <div id="erreur-connexion" class="erreur"></div>
+            <div class="btn_top">
+                <button type="submit" class="btn_ajouter">Connexion</button> 
+            </div>
+            
+            <!--Redirection pour cree un compte-->
+            <a href="/inscription" class="account-link">Premiere fois parmis nous? Cliquez ici pour vous inscrire!</a>
+        </div> 
+    </form>
+</section>
